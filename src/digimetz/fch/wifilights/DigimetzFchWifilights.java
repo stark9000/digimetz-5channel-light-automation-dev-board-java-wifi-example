@@ -8,7 +8,6 @@ package digimetz.fch.wifilights;
 import java.awt.EventQueue;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-import org.pushingpixels.substance.api.SubstanceLookAndFeel;
 
 /**
  *
@@ -21,10 +20,17 @@ public class DigimetzFchWifilights {
      */
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
+
+            //SubstanceGraphiteLookAndFeel
+//            try {
+//                UIManager.setLookAndFeel("org.pushingpixels.substance.api.skin.SubstanceGraphiteLookAndFeel");
+//                UIManager.put(SubstanceLookAndFeel.COLORIZATION_FACTOR, 1.0);
+//                UIManager.put(SubstanceLookAndFeel.USE_THEMED_DEFAULT_ICONS, false);
+//            } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | UnsupportedLookAndFeelException e) {
+//                System.exit(0);
+//            }
             try {
-                UIManager.setLookAndFeel("org.pushingpixels.substance.api.skin.SubstanceGraphiteLookAndFeel");
-                UIManager.put(SubstanceLookAndFeel.COLORIZATION_FACTOR, 1.0);
-                UIManager.put(SubstanceLookAndFeel.USE_THEMED_DEFAULT_ICONS, false);
+                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
             } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | UnsupportedLookAndFeelException e) {
                 System.exit(0);
             }
